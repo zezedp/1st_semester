@@ -35,7 +35,7 @@ def programa_que_le_i(a,b,c,i= input('Digite um número entre 1 e 4')):
         return print(soma, f'a={a},b={b},c={b}')
     
 
-def buscarSetor(P, setor):
+def buscarSetor(setor):
     """
     Essa função recebe o input dos dados dos funcionários e o setor, e retorna os dados dos funcionários daquele setor;
     str, str -> list
