@@ -58,17 +58,3 @@ def buscarSetor(setor):
     if matriz_resultado == []:
         return "Nenhum registro encontrado"
     return matriz_resultado
-
-
-
-"""
-Não (a e b)
-
-
-"""
-
-
-def invertido(str):
-    return str[::-1]
-
-print(invertido('José Moisés Pereira da Silva Fortunato'))
