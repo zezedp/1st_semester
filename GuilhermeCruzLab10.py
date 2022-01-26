@@ -1,3 +1,28 @@
+def buscarSetor(setor):
+    """
+    Essa função recebe o input dos dados dos funcionários e o setor, e retorna os dados dos funcionários daquele setor;
+    str, str -> list
+    """
+    matriz = []
+    P = input('Digite o número de funcionários: ')
+    n_funcionarios = int(P)
+    contador = 0
+    while contador < n_funcionarios:
+        P = input('Digite os dados de um funcionário, separando-os com um espaço: ')
+        dados = P.split(' ')
+        matriz.append(dados)
+        contador += 1
+    matriz_resultado = []
+    for i in matriz:
+        if setor in i:
+            matriz_resultado.append(i)
+    for i in matriz_resultado:
+        list.pop(i, 2)
+    if matriz_resultado == []:
+        return "Nenhum registro encontrado"
+    return matriz_resultado
+
+
 def serie_dado(serie_lancamentos=input('Digite a série de lancamentos, separando cada caso com um espaço: ')):
     """
     Essa função recebe uma série de lançamentos de dados e retorna quantos elementos duplicados adjacentes têm;
@@ -34,27 +59,3 @@ def programa_que_le_i(a,b,c,i= input('Digite um número entre 1 e 4')):
             soma += x
         return print(soma, f'a={a},b={b},c={b}')
     
-
-def buscarSetor(setor):
-    """
-    Essa função recebe o input dos dados dos funcionários e o setor, e retorna os dados dos funcionários daquele setor;
-    str, str -> list
-    """
-    matriz = []
-    P = input('Digite o número de funcionários: ')
-    n_funcionarios = int(P)
-    contador = 0
-    while contador < n_funcionarios:
-        P = input('Digite os dados de um funcionário, separando-os com um espaço: ')
-        dados = P.split(' ')
-        matriz.append(dados)
-        contador += 1
-    matriz_resultado = []
-    for i in matriz:
-        if setor in i:
-            matriz_resultado.append(i)
-    for i in matriz_resultado:
-        list.pop(i, 2)
-    if matriz_resultado == []:
-        return "Nenhum registro encontrado"
-    return matriz_resultado
